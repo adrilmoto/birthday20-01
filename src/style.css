@@ -10,7 +10,7 @@
 
 @font-face {
   font-family: "PPNikkeiLine";
-  src: url("src/assets/fonts/PPNikkeiPacific-Ultrabold.otf");
+  src: url("src/static/fonts/PPNikkeiPacific-Ultrabold.otf");
 }
 
 * {

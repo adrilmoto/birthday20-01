@@ -6,19 +6,19 @@ import { gsap } from "gsap";
 
 const photos = [
   {
-    url: "src/assets/gallery.jpg",
+    url: "src/static/gallery.jpg",
     description: "Her radiant smile brightens every room she enters",
   },
   {
-    url: "src/assets/gallery4.jpg",
+    url: "src/static/gallery4.jpg",
     description: "A natural leader with a compassionate heart",
   },
   {
-    url: "src/assets/gallery2.jpg",
+    url: "src/static/gallery2.jpg",
     description: "Always ready for new adventures",
   },
   {
-    url: "src/assets/gallery3.jpg",
+    url: "src/static/gallery3.jpg",
     description: "Always ready for new adventures",
   },
 ];
