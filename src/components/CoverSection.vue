@@ -7,7 +7,7 @@ import FallingLeaves from "./FallingLeaves.vue";
 import SectionWrapper from "./SectionWrapper.vue";
 // import { useWindowScroll } from "@vueuse/core";
 
-gsap.registerPlugin(ScrollTrigger, SplitText);
+gsap.registerPlugin(ScrollTrigger);
 
 const name = "Anna"; // Replace with actual name
 const secondName = "Shapova";
