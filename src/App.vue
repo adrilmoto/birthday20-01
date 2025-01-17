@@ -44,7 +44,7 @@ function createAnimation() {
 //   animation.progress(value / STEPS);
 // });
 
-let isTransition = false;
+// let isTransition = false;
 
 // const clamp = (n: number, min = -Infinity, max = Infinity) =>
 //   Math.min(Math.max(min, n), max);

@@ -7,7 +7,7 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref, onMounted } from "vue";
 import { gsap } from "gsap";
 
@@ -19,13 +19,13 @@ const leaves = ref(
 );
 
 function animateLeaves() {
-  const _leaves = leavesRef.value;
-  _leaves.forEach((leaf, index) => {
+  const _leaves = leavesRef.value as any;
+  _leaves.forEach((leaf: any) => {
     const startX = Math.floor(Math.random() * 100); // Start position
     const endX = startX + (Math.random() * 20 - 10); // Slight horizontal drift
     const duration = Math.random() * 20 + 5;
 
-    const delay = Math.random() * 5; // Staggered start
+    // const delay = Math.random() * 5; // Staggered start
 
     gsap.fromTo(
       leaf,
