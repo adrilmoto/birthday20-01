@@ -4,20 +4,20 @@ import SectionWrapper from "./SectionWrapper.vue";
 import { SplitText } from "gsap-trial/SplitText";
 import { gsap } from "gsap";
 
-const photos = [
-  {
-    url: "https://picsum.photos/600/400",
-    description: "Her radiant smile brightens every room she enters",
-  },
-  {
-    url: "https://picsum.photos/601/400",
-    description: "A natural leader with a compassionate heart",
-  },
-  {
-    url: "https://picsum.photos/602/400",
-    description: "Always ready for new adventures",
-  },
-];
+// const photos = [
+//   {
+//     url: "https://picsum.photos/600/400",
+//     description: "Her radiant smile brightens every room she enters",
+//   },
+//   {
+//     url: "https://picsum.photos/601/400",
+//     description: "A natural leader with a compassionate heart",
+//   },
+//   {
+//     url: "https://picsum.photos/602/400",
+//     description: "Always ready for new adventures",
+//   },
+// ];
 onMounted(() => {
   const childSplit = new SplitText(".gallery-section .title span", {
     type: "lines",

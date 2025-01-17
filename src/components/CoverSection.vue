@@ -1,17 +1,17 @@
 <script setup lang="ts">
-import { watch, onMounted } from "vue";
+import { onMounted } from "vue";
 import gsap from "gsap";
 import { SplitText } from "gsap-trial/SplitText";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import FallingLeaves from "./FallingLeaves.vue";
 import SectionWrapper from "./SectionWrapper.vue";
-import { useWindowScroll } from "@vueuse/core";
+// import { useWindowScroll } from "@vueuse/core";
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
 const name = "Anna"; // Replace with actual name
 const secondName = "Shapova";
-const { x, y } = useWindowScroll();
+// const { x, y } = useWindowScroll();
 
 onMounted(() => {
   const childSplit = new SplitText(".name-background h1", {

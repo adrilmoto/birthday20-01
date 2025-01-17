@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { ref } from "vue";
-const words = ref(["20 / 01", "Anna Shchapova", "Birthday", "20 / 01"]);
 const props = defineProps({
   leftWords: {
     type: Array,
