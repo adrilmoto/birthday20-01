@@ -4,20 +4,24 @@ import SectionWrapper from "./SectionWrapper.vue";
 // import { SplitText } from "gsap-trial/SplitText";
 import { gsap } from "gsap";
 
-// const photos = [
-//   {
-//     url: "https://picsum.photos/600/400",
-//     description: "Her radiant smile brightens every room she enters",
-//   },
-//   {
-//     url: "https://picsum.photos/601/400",
-//     description: "A natural leader with a compassionate heart",
-//   },
-//   {
-//     url: "https://picsum.photos/602/400",
-//     description: "Always ready for new adventures",
-//   },
-// ];
+const photos = [
+  {
+    url: "src/assets/gallery.jpg",
+    description: "Her radiant smile brightens every room she enters",
+  },
+  {
+    url: "src/assets/gallery4.jpg",
+    description: "A natural leader with a compassionate heart",
+  },
+  {
+    url: "src/assets/gallery2.jpg",
+    description: "Always ready for new adventures",
+  },
+  {
+    url: "src/assets/gallery3.jpg",
+    description: "Always ready for new adventures",
+  },
+];
 onMounted(() => {
   // const childSplit = new SplitText(".gallery-section .title span", {
   //   type: "lines",
@@ -59,24 +63,9 @@ onMounted(() => {
           мир становится ярче, а мгновения — по-настоящему бесценными.
         </div>
         <div class="gallery">
-          <div class="card">
+          <div v-for="photo in photos" class="card">
             <div class="inside-border">
-              <span>PHOTO</span>
-            </div>
-          </div>
-          <div class="card">
-            <div class="inside-border">
-              <span>PHOTO</span>
-            </div>
-          </div>
-          <div class="card">
-            <div class="inside-border">
-              <span>PHOTO</span>
-            </div>
-          </div>
-          <div class="card">
-            <div class="inside-border">
-              <span>PHOTO</span>
+              <img :src="photo.url" />
             </div>
           </div>
         </div>
@@ -119,7 +108,7 @@ onMounted(() => {
   align-items: center;
   width: 100%;
   color: var(--primary-color);
-  padding-top: 100px;
+  padding: 0 100px;
 
   .gallery {
     position: sticky;
@@ -130,7 +119,7 @@ onMounted(() => {
     gap: 20px;
     width: 100%;
 
-    max-width: 900px;
+    max-width: 1200px;
     grid-template-areas:
       "card1 card2 card3"
       "card1 card4 card3";
@@ -144,7 +133,7 @@ onMounted(() => {
     padding: 16px;
     position: relative;
     min-height: 400px;
-    max-height: 400px;
+    max-height: 600px;
 
     &:nth-child(1) {
       grid-area: card1;
@@ -165,7 +154,7 @@ onMounted(() => {
       position: relative;
       width: 100%;
       height: 100%;
-      padding: 20px;
+      // padding: 20px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -184,6 +173,14 @@ onMounted(() => {
         position: absolute;
         inset: 0;
         background: var(--primary-color);
+        -webkit-mask: var(--mask);
+        mask: var(--mask);
+      }
+      img {
+        width: 100%;
+        object-fit: cover;
+        height: 100%;
+        --mask: radial-gradient(40px at 40px 40px, #0000 98%, #000) -40px -40px;
         -webkit-mask: var(--mask);
         mask: var(--mask);
       }
