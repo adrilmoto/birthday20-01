@@ -1,12 +1,14 @@
-<script setup>
+<script setup lang="ts">
 import { computed } from "vue";
 const date = computed(() => {
   return new Date().getFullYear();
 });
 </script>
+
 <template>
   <div class="footer">KUKUSANNET DESIGN © {{ date }}</div>
 </template>
+
 <style lang="scss">
 .footer {
   color: var(--primary-color);

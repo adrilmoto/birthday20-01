@@ -2,16 +2,16 @@
 import { ref, onMounted, watch } from "vue";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useEventListener, useWindowSize, useElementSize } from "@vueuse/core";
+import { SplitText } from "gsap-trial/SplitText";
+import { useWindowSize, useElementSize } from "@vueuse/core";
 import CoverSection from "./components/CoverSection.vue";
 import AboutSection from "./components/AboutSection.vue";
 import WishesSection from "./components/WishesSection.vue";
 import GallerySection from "./components/GallerySection.vue";
 import MomentsSection from "./components/MomentsSection.vue";
 import AllWishes from "./components/AllWishes.vue";
+import FooterApp from "./components/F.vue";
 import Header from "./components/Header.vue";
-import Footer from "./components/Footer.vue";
-import { SplitText } from "gsap-trial/SplitText";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -117,7 +117,7 @@ onMounted(() => {
       <GallerySection />
       <MomentsSection />
       <AllWishes />
-      <Footer />
+      <FooterApp />
     </div>
   </div>
 </template>
