@@ -49,7 +49,7 @@ const toggleMoment = (index: number) => {
 };
 
 onMounted(() => {
-  gsap.from(".moments-section .title span", {
+  gsap.from(".moments-section-title", {
     duration: 1,
     yPercent: 120,
     ease: "power4",
@@ -76,7 +76,7 @@ onMounted(() => {
       <div class="moments-content">
         <div class="subtitle">HER</div>
         <div class="title">
-          <span>MOMENTS</span>
+          <div class="moments-section-title">MOMENTS</div>
         </div>
         <div class="text">
           Путешествия — это моменты, когда её глаза сияют от восторга, а сердце

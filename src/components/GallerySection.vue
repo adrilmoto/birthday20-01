@@ -23,7 +23,7 @@ onMounted(() => {
   //   type: "lines",
   //   linesClass: "split-child",
   // });
-  gsap.from(".gallery-section .title span", {
+  gsap.from(".gallery-title-span", {
     duration: 1,
     yPercent: 120,
     ease: "power4",
@@ -50,7 +50,7 @@ onMounted(() => {
       <div class="gallery-content">
         <div class="subtitle">SHE IS</div>
         <div class="title">
-          <span>AWESOME</span>
+          <div class="gallery-title-span">AWESOME</div>
         </div>
         <div class="text">
           Её улыбка, как первое утро весны, озаряет всё вокруг и заставляет

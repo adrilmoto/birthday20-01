@@ -49,7 +49,7 @@ const toggleMoment = (index: number) => {
 };
 
 onMounted(() => {
-  gsap.from(".all-wishes-section .title span", {
+  gsap.from(".all-wishes-section-title", {
     duration: 1,
     yPercent: 120,
     ease: "power4",
@@ -76,7 +76,7 @@ onMounted(() => {
       <div class="moments-content">
         <div class="subtitle">FRIENDS</div>
         <div class="title">
-          <span>WISHES</span>
+          <div class="all-wishes-section-title">WISHES</div>
         </div>
         <div class="text">
           Каждое поздравление здесь — это искреннее проявление любви,

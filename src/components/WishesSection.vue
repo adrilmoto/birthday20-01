@@ -10,7 +10,7 @@ onMounted(() => {
       start: "top center",
     },
     y: 100,
-    opacity: 0,
+    // opacity: 0,
     duration: 1,
     stagger: 0.2,
   });
@@ -28,7 +28,7 @@ onMounted(() => {
       <div class="wishes-content">
         <div class="wishes-container">
           <div class="logo" />
-          <span class="title"
+          <span class="title wish-card"
             >Oda Nobunaga is known as the first great unifier of japan - a
             daimyō who overthrew the ashikaga shogunate and ended years of
             feudal wars in japan</span
@@ -120,17 +120,5 @@ onMounted(() => {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
-}
-
-.wish-card {
-  background-color: white;
-  padding: 2rem;
-  border-radius: 15px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-
-  h3 {
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-  }
 }
 </style>
