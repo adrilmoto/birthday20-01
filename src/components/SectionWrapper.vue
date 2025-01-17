@@ -73,7 +73,7 @@ const props = defineProps({
     height: 100%;
     text-transform: capitalize;
     color: var(--border-color);
-    font-family: "PPNikkeiLine";
+    font-family: "PPNikkeiLine" serif;
     span {
       height: auto;
       width: 150px;

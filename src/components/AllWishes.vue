@@ -59,7 +59,7 @@ onMounted(() => {
       trigger: ".all-wishes-section",
       start: "top center",
       toggleActions: "play none none reverse",
-      markers: true,
+      // markers: true,
     },
   });
 });
