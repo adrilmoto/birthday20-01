@@ -2,7 +2,7 @@
 import { ref, onMounted } from "vue";
 import SectionWrapper from "./SectionWrapper.vue";
 import { gsap } from "gsap";
-import { SplitText } from "gsap-trial/SplitText";
+// import { SplitText } from "gsap-trial/SplitText";
 
 const moments = ref([
   {
@@ -49,11 +49,7 @@ const toggleMoment = (index: number) => {
 };
 
 onMounted(() => {
-  const childSplit = new SplitText(".moments-section .title span", {
-    type: "lines",
-    linesClass: "split-child",
-  });
-  gsap.from(childSplit.lines, {
+  gsap.from(".moments-section .title span", {
     duration: 1,
     yPercent: 120,
     ease: "power4",

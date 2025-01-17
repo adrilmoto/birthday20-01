@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { onMounted } from "vue";
 import SectionWrapper from "./SectionWrapper.vue";
-import { SplitText } from "gsap-trial/SplitText";
+// import { SplitText } from "gsap-trial/SplitText";
 import { gsap } from "gsap";
 
 // const photos = [
@@ -19,11 +19,11 @@ import { gsap } from "gsap";
 //   },
 // ];
 onMounted(() => {
-  const childSplit = new SplitText(".gallery-section .title span", {
-    type: "lines",
-    linesClass: "split-child",
-  });
-  gsap.from(childSplit.lines, {
+  // const childSplit = new SplitText(".gallery-section .title span", {
+  //   type: "lines",
+  //   linesClass: "split-child",
+  // });
+  gsap.from(".gallery-section .title span", {
     duration: 1,
     yPercent: 120,
     ease: "power4",

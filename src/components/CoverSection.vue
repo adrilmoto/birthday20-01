@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { onMounted } from "vue";
 import gsap from "gsap";
-import { SplitText } from "gsap-trial/SplitText";
+// import { SplitText } from "gsap-trial/SplitText";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import FallingLeaves from "./FallingLeaves.vue";
 import SectionWrapper from "./SectionWrapper.vue";
@@ -14,12 +14,7 @@ const secondName = "Shapova";
 // const { x, y } = useWindowScroll();
 
 onMounted(() => {
-  const childSplit = new SplitText(".name-background h1", {
-    type: "lines",
-    linesClass: "split-child",
-  });
-
-  gsap.from(childSplit.lines, {
+  gsap.from(".name-background h1", {
     duration: 1.5,
     yPercent: 100,
     ease: "power4",
