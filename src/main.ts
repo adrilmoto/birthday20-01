@@ -5,6 +5,6 @@ import App from './App.vue'
 import { createHead } from 'unhead'
 
 // Create a global head instance
-const head = createHead()
+createHead()
 
 createApp(App).mount('#app')
