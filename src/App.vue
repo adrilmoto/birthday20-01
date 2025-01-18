@@ -105,6 +105,11 @@ onMounted(() => {
   //   { passive: true }
   // );
 });
+import { useHead } from 'unhead'
+
+useHead({
+  title: 'Happy Birthday'
+})
 </script>
 
 <template>
