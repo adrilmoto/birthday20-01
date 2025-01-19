@@ -8,6 +8,7 @@ onMounted(() => {
     scrollTrigger: {
       trigger: ".wishes-section",
       start: "top center",
+      toggleActions: "play none none reverse",
     },
     y: 100,
     // opacity: 0,
@@ -28,16 +29,16 @@ onMounted(() => {
       <div class="wishes-content">
         <div class="wishes-container">
           <div class="logo" />
-          <span class="title wish-card"
-            >Oda Nobunaga is known as the first great unifier of japan - a
-            daimyō who overthrew the ashikaga shogunate and ended years of
-            feudal wars in japan</span
-          >
-          <span class="text"
-            >He is said to be a tall, thin, and scantily bearded man. He is
-            highly ambitious which made him ruthless but he is also said to be a
-            realistic leader, admired for his ability to make difficult
-            decisions.</span
+          <span class="title wish-card">
+            Этот сайт предназначен самой лучшей графической дизайнерке с
+            глубоким чувством любви к животным и природе. Она вдохновляется
+            бобрами, символизирующими трудолюбие. Она движется вперед, развивая
+            свой собственный стиль и подход в дизайне.
+          </span>
+          <span class="text wish-card"
+            >Этот сайт — первый шаг к созданию личного бренда, который поможет
+            раскрыть её потенциал и достичь новых высот в профессиональной
+            сфере.</span
           >
         </div>
       </div>
@@ -102,11 +103,11 @@ onMounted(() => {
 
   .title {
     font-weight: 600;
-    font-size: 56px;
+    font-size: 39px;
     max-width: 800px;
-    line-height: 96%;
-    font-family: "PPNikkeiLine";
-    text-transform: capitalize;
+    line-height: 110%;
+    font-family: "Oswald";
+    text-transform: uppercase;
   }
   .text {
     max-width: 500px;

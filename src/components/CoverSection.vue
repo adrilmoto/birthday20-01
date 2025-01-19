@@ -5,6 +5,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import FallingLeaves from "./FallingLeaves.vue";
 import SectionWrapper from "./SectionWrapper.vue";
+import CoverImage from "./CoverImage.vue";
 // import { useWindowScroll } from "@vueuse/core";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -14,7 +15,7 @@ const secondName = "Shapova";
 // const { x, y } = useWindowScroll();
 
 onMounted(() => {
-  gsap.from(".name-background h1", {
+  gsap.from(".name-background-anim", {
     duration: 1.5,
     yPercent: 100,
     ease: "power4",
@@ -26,6 +27,31 @@ onMounted(() => {
     duration: 1.5,
     delay: 0.6,
   });
+
+  // gsap.to(".name-background-anim", {
+  //   y: 0,
+  //   ease: "none", // No easing for smooth scrolling
+  //   scrollTrigger: {
+  //     trigger: ".name-background", // The element that will trigger the effect
+  //     start: "top center", // Start the animation when the top of the container reaches the top of the viewport
+  //     end: "bottom", // End the animation when the bottom of the container reaches the top of the viewport
+  //     scrub: true, // Makes the animation follow the scroll
+  //     pin: true, // Keeps the text pinned while scrolling
+  //     markers: true,
+  //   },
+  // });
+
+  // gsap.to(".portrait", {
+  //   y: (index) => index * 250,
+  //   ease: "none", // No easing for smooth scrolling
+  //   scrollTrigger: {
+  //     trigger: ".name-background",
+  //     start: "top top", // Start the animation when the top of the container reaches the top of the viewport
+  //     end: "bottom", // End the animation when the bottom of the container reaches the top of the viewport
+  //     scrub: true, // Makes the animation follow the scroll
+  //     pin: true, // Keeps the text pinned while scrolling
+  //   },
+  // });
 });
 
 const words = ["20 / 01", "ANNA SHCHAPOVA", "BIRTHDAY", "20 / 01"];
@@ -39,17 +65,17 @@ const words = ["20 / 01", "ANNA SHCHAPOVA", "BIRTHDAY", "20 / 01"];
   >
     <template #default>
       <div class="cover-content">
-        <span class="name-background">
-          <h1 style="overflow: hidden">
-            <span>{{ name }} </span>
-          </h1>
-          <h1 style="overflow: hidden">
-            <span>{{ secondName }}</span>
-          </h1>
-        </span>
+        <div class="name-background">
+          <div class="name-background-overflow">
+            <div class="name-background-anim">{{ name }}</div>
+          </div>
+          <div class="name-background-overflow">
+            <div class="name-background-anim">{{ secondName }}</div>
+          </div>
+        </div>
 
         <div class="portrait-container">
-          <div class="portrait" />
+          <CoverImage class="portrait" />
         </div>
         <FallingLeaves
           :count="30"
@@ -67,12 +93,19 @@ const words = ["20 / 01", "ANNA SHCHAPOVA", "BIRTHDAY", "20 / 01"];
   background-color: var(--primary-color);
   position: relative;
   --border-color: var(--background-color);
+  overflow: hidden;
 }
 .cover-content {
   display: flex;
   align-items: flex-start;
   justify-content: flex-end;
+  overflow: hidden;
   height: 100vh;
+}
+
+.name-background-anim {
+  // display: flex;
+  text-align: center;
 }
 
 .name-background {
@@ -90,14 +123,13 @@ const words = ["20 / 01", "ANNA SHCHAPOVA", "BIRTHDAY", "20 / 01"];
   transform: translate(-50%);
   overflow: hidden;
 
-  span {
-    font-family: "Anton", serif;
-  }
-  h1 {
+  .name-background-overflow {
     overflow: hidden;
+    // border: 1px solid red;
     font-size: 20vw;
     height: 20vw;
     line-height: 100%;
+    font-family: "Anton", serif;
   }
 }
 
@@ -110,10 +142,10 @@ const words = ["20 / 01", "ANNA SHCHAPOVA", "BIRTHDAY", "20 / 01"];
   .portrait {
     width: 100%;
     height: 100%;
-    background-size: contain;
-    background-image: url("/queen.png");
-    background-repeat: no-repeat;
-    background-position: center bottom;
+    // background-size: contain;
+    // background-image: url("/queen.png");
+    // background-repeat: no-repeat;
+    // background-position: center bottom;
     // box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
   }
 }

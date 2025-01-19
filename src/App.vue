@@ -2,18 +2,19 @@
 import { onMounted } from "vue";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollSmoother } from "gsap-trial/ScrollSmoother";
 // import { SplitText } from "gsap-trial/SplitText";
 // import { useWindowSize, useElementSize } from "@vueuse/core";
 import CoverSection from "./components/CoverSection.vue";
 import AboutSection from "./components/AboutSection.vue";
 import WishesSection from "./components/WishesSection.vue";
 import GallerySection from "./components/GallerySection.vue";
-import MomentsSection from "./components/MomentsSection.vue";
+// import MomentsSection from "./components/MomentsSection.vue";
 import AllWishes from "./components/AllWishes.vue";
 import FooterApp from "./components/F.vue";
 import Header from "./components/Header.vue";
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 // const { height: windowHeight } = useWindowSize();
 // const content = ref();
@@ -105,11 +106,11 @@ onMounted(() => {
   //   { passive: true }
   // );
 });
-import { useHead } from 'unhead'
+import { useHead } from "unhead";
 
 useHead({
-  title: 'Happy Birthday'
-})
+  title: "Happy Birthday",
+});
 </script>
 
 <template>
@@ -120,7 +121,7 @@ useHead({
       <AboutSection />
       <WishesSection />
       <GallerySection />
-      <MomentsSection />
+      <!-- <MomentsSection /> -->
       <AllWishes />
       <FooterApp />
     </div>

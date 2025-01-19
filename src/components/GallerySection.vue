@@ -40,6 +40,38 @@ onMounted(() => {
       // markers: true,
     },
   });
+  gsap.from(".left-photo", {
+    xPercent: 105,
+    duration: 1,
+    scrollTrigger: {
+      trigger: ".gallery-content",
+      start: "top top",
+      toggleActions: "play none none reverse",
+    },
+  });
+  gsap.from(".right-photo", {
+    xPercent: -105,
+    duration: 1,
+    scrollTrigger: {
+      trigger: ".gallery-content",
+      start: "top top",
+      toggleActions: "play none none reverse",
+    },
+  });
+
+  // gsap.to(".name-photo-anim", {
+  //   y: (index) => index * 100,
+  //   stagger: 0,
+  //   ease: "power1.inOut", // No easing for smooth scrolling
+  //   scrollTrigger: {
+  //     trigger: ".gallery", // The element that will trigger the effect
+  //     start: "top top", // Start the animation when the top of the container reaches the top of the viewport
+  //     end: "bottom", // End the animation when the bottom of the container reaches the top of the viewport
+  //     scrub: true, // Makes the animation follow the scroll
+  //     pin: true, // Keeps the text pinned while scrolling
+  //     markers: true,
+  //   },
+  // });
 });
 </script>
 
@@ -63,7 +95,11 @@ onMounted(() => {
           мир становится ярче, а мгновения — по-настоящему бесценными.
         </div>
         <div class="gallery">
-          <div v-for="photo in photos" class="card">
+          <div
+            v-for="(photo, index) in photos"
+            class="card"
+            :class="{ 'left-photo': index === 0, 'right-photo': index === 2 }"
+          >
             <div class="inside-border">
               <img :src="photo.url" />
             </div>
@@ -109,6 +145,7 @@ onMounted(() => {
   width: 100%;
   color: var(--primary-color);
   padding: 0 100px;
+  // padding-bottom: 1000px;
 
   .gallery {
     position: sticky;
@@ -134,6 +171,15 @@ onMounted(() => {
     position: relative;
     min-height: 400px;
     max-height: 600px;
+    z-index: 999;
+
+    &.left-photo {
+      z-index: 10;
+    }
+
+    &.right-photo {
+      z-index: 10;
+    }
 
     &:nth-child(1) {
       grid-area: card1;

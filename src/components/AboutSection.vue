@@ -3,17 +3,21 @@ import { onMounted, ref } from "vue";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SectionWrapper from "./SectionWrapper.vue";
+import CoverImage from "./CoverImage.vue";
 
 gsap.registerPlugin(ScrollTrigger);
 
 onMounted(() => {
-  gsap.from(".about-content", {
+  gsap.from(".block", {
     scrollTrigger: {
       trigger: ".about-section",
       start: "top center",
+      toggleActions: "play none none reverse",
     },
+
     y: 50,
     opacity: 0,
+    stagger: 0.1,
     duration: 1,
   });
 });
@@ -33,7 +37,7 @@ const blocks = ref([
   },
   {
     title: "timeline",
-    text: "1999 -- 2199",
+    text: "1999 - 2199",
   },
   {
     title: "control",
@@ -63,7 +67,7 @@ const blocks = ref([
   >
     <template #default>
       <div class="about-content">
-        <div class="logo" />
+        <CoverImage class="logo" />
         <!-- <p>
             A beautiful soul with a heart of gold, Sarah brings light and joy to
             everyone around her. Her infectious smile and warm personality make
@@ -84,6 +88,7 @@ const blocks = ref([
 .about-section {
   background-color: var(--background-color);
   --border-color: var(--primary-color);
+  z-index: 99999;
 
   .about-content {
     width: 100%;
@@ -93,10 +98,12 @@ const blocks = ref([
     color: var(--primary-color);
     height: 400px;
     padding: 0 20px;
+    z-index: 99999;
     .logo {
-      background: var(--primary-color);
+      // background: var(--primary-color);
       min-width: 280px;
-      height: 280px;
+      max-width: 380px;
+      height: 400px;
     }
     .grid {
       display: grid;
