@@ -3,7 +3,8 @@ import { onMounted, ref } from "vue";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SectionWrapper from "./SectionWrapper.vue";
-import CoverImage from "./CoverImage.vue";
+// @ts-ignore
+import MainAnya from "./MainAnya.vue";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -67,7 +68,7 @@ const blocks = ref([
   >
     <template #default>
       <div class="about-content">
-        <CoverImage class="logo" />
+        <MainAnya class="logo" />
         <!-- <p>
             A beautiful soul with a heart of gold, Sarah brings light and joy to
             everyone around her. Her infectious smile and warm personality make

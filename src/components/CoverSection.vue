@@ -5,7 +5,8 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import FallingLeaves from "./FallingLeaves.vue";
 import SectionWrapper from "./SectionWrapper.vue";
-import CoverImage from "./CoverImage.vue";
+// @ts-ignore
+import MainAnya from "./MainAnya.vue";
 // import { useWindowScroll } from "@vueuse/core";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -75,7 +76,7 @@ const words = ["20 / 01", "ANNA SHCHAPOVA", "BIRTHDAY", "20 / 01"];
         </div>
 
         <div class="portrait-container">
-          <CoverImage class="portrait" />
+          <MainAnya class="portrait" />
         </div>
         <FallingLeaves
           :count="30"
