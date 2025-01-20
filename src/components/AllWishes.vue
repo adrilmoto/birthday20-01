@@ -266,12 +266,18 @@ onMounted(() => {
   .subtitle {
     font-size: 56px;
     margin-bottom: 0px;
+    @media screen and (max-width: 900px) {
+      font-size: 36px;
+    }
   }
   .title {
     font-size: 280px;
     line-height: 100%;
     margin-bottom: 0px;
     overflow: hidden;
+    @media screen and (max-width: 900px) {
+      font-size: 10vh;
+    }
   }
   .text {
     font-size: 20px;
@@ -280,6 +286,9 @@ onMounted(() => {
     text-align: center;
     margin-top: 60px;
     font-family: "Oswald";
+    @media screen and (max-width: 900px) {
+      max-width: calc(100% - 40px);
+    }
   }
 }
 
@@ -290,7 +299,7 @@ onMounted(() => {
   align-items: center;
   width: 100%;
   color: var(--primary-color);
-  padding: 100px 0;
+  padding: 60px 0px;
 
   .accordion-section {
     display: flex;
@@ -318,6 +327,9 @@ onMounted(() => {
         .vert {
           width: 2px;
           height: 40px;
+          @media screen and (max-width: 900px) {
+            height: 20px;
+          }
           background-color: var(--cross-color);
           position: absolute;
           transition: 400ms;
@@ -326,6 +338,9 @@ onMounted(() => {
         .hors {
           width: 40px;
           height: 2px;
+          @media screen and (max-width: 900px) {
+            width: 20px;
+          }
           background-color: var(--cross-color);
           position: absolute;
         }
@@ -353,6 +368,9 @@ onMounted(() => {
           font-size: 42px;
           text-transform: capitalize !important;
           font-family: "PPNikkeiLine";
+          @media screen and (max-width: 900px) {
+            font-size: 24px;
+          }
         }
 
         .toggle-icon {
@@ -375,16 +393,27 @@ onMounted(() => {
           flex-direction: row;
           padding: 1.5rem;
           gap: 40px;
+
+          @media screen and (max-width: 900px) {
+            flex-direction: column;
+          }
         }
         &-description {
           width: 400px;
           font-family: "Oswald";
+          @media screen and (max-width: 900px) {
+            width: 100%;
+          }
         }
 
         .image-drid {
           display: grid;
           grid-template-columns: 1fr 1fr;
           gap: 20px;
+
+          @media screen and (max-width: 900px) {
+            grid-template-columns: 1fr;
+          }
         }
 
         img {
@@ -392,6 +421,12 @@ onMounted(() => {
           height: 366px;
           object-fit: cover;
           border: 1px solid var(--background-color);
+
+          @media screen and (max-width: 900px) {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 1/1;
+          }
         }
       }
 
@@ -413,7 +448,7 @@ onMounted(() => {
       }
 
       &.is-open .wish-content {
-        max-height: 2000px;
+        max-height: 7000px;
         transition: max-height 1s ease-in-out;
       }
     }

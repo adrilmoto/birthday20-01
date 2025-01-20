@@ -74,6 +74,9 @@ onMounted(() => {
   height: 760px;
   position: relative;
   padding: 40px;
+  @media screen and (max-width: 900px) {
+    padding: 10px;
+  }
   font-family: "Oswald", serif;
   color: var(--primary-color);
   box-sizing: border-box;
@@ -108,12 +111,19 @@ onMounted(() => {
     line-height: 110%;
     font-family: "Oswald";
     text-transform: uppercase;
+    @media screen and (max-width: 900px) {
+      font-size: 24px;
+    }
   }
   .text {
     max-width: 500px;
     line-height: 140%;
     font-weight: 400;
     font-size: 20px;
+
+    @media screen and (max-width: 900px) {
+      font-size: 18px;
+    }
   }
 }
 

@@ -118,12 +118,18 @@ onMounted(() => {
   .subtitle {
     font-size: 56px;
     margin-bottom: 0px;
+    @media screen and (max-width: 900px) {
+      font-size: 36px;
+    }
   }
   .title {
     font-size: 280px;
     line-height: 100%;
     margin-bottom: 0px;
     overflow: hidden;
+    @media screen and (max-width: 900px) {
+      font-size: 10vh;
+    }
   }
   .text {
     font-size: 20px;
@@ -134,6 +140,10 @@ onMounted(() => {
     line-height: 140%;
     font-weight: 600;
     font-family: "Oswald";
+
+    @media screen and (max-width: 900px) {
+      max-width: 100%;
+    }
   }
 }
 
@@ -144,12 +154,10 @@ onMounted(() => {
   align-items: center;
   width: 100%;
   color: var(--primary-color);
-  padding: 0 100px;
+  padding: 60px 20px;
   // padding-bottom: 1000px;
 
   .gallery {
-    position: sticky;
-    top: 20px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -160,6 +168,16 @@ onMounted(() => {
     grid-template-areas:
       "card1 card2 card3"
       "card1 card4 card3";
+
+    @media screen and (max-width: 900px) {
+      max-width: 100%;
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "card1"
+        "card2"
+        "card3"
+        "card4";
+    }
 
     &:last-child {
       grid-column: 1;
@@ -184,6 +202,9 @@ onMounted(() => {
     &:nth-child(1) {
       grid-area: card1;
       margin-top: 200px;
+      @media screen and (max-width: 900px) {
+        margin-top: 0px;
+      }
     }
     &:nth-child(2) {
       grid-area: card2;
@@ -191,6 +212,9 @@ onMounted(() => {
     &:nth-child(3) {
       grid-area: card3;
       margin-top: 200px;
+      @media screen and (max-width: 900px) {
+        margin-top: 0px;
+      }
     }
     &:nth-child(4) {
       grid-area: card4;

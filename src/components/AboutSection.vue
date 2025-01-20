@@ -12,7 +12,7 @@ onMounted(() => {
   gsap.from(".block", {
     scrollTrigger: {
       trigger: ".about-section",
-      start: "top center",
+      start: "top bottom",
       toggleActions: "play none none reverse",
     },
 
@@ -100,11 +100,18 @@ const blocks = ref([
     height: 400px;
     padding: 0 20px;
     z-index: 99999;
+    @media screen and (max-width: 900px) {
+      flex-direction: column;
+      height: 650px;
+    }
     .logo {
       // background: var(--primary-color);
       min-width: 280px;
       max-width: 380px;
       height: 400px;
+      @media screen and (max-width: 900px) {
+        display: none;
+      }
     }
     .grid {
       display: grid;
@@ -113,6 +120,9 @@ const blocks = ref([
       width: 100%;
       max-width: 900px;
       gap: 30px;
+      @media screen and (max-width: 900px) {
+        grid-template-columns: 1fr;
+      }
     }
 
     .block {

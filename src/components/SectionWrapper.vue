@@ -65,6 +65,10 @@ const props = defineProps({
     overflow: hidden;
     border-left: 1px solid var(--border-color);
     border-right: 1px solid var(--border-color);
+
+    @media screen and (max-width: 900px) {
+      border: none;
+    }
   }
 
   .line {
@@ -74,6 +78,9 @@ const props = defineProps({
     text-transform: capitalize;
     color: var(--border-color);
     font-family: "PPNikkeiLine" serif;
+    @media screen and (max-width: 900px) {
+      display: none;
+    }
     span {
       height: auto;
       width: 150px;

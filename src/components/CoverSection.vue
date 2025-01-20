@@ -102,6 +102,9 @@ const words = ["20 / 01", "ANNA SHCHAPOVA", "BIRTHDAY", "20 / 01"];
   justify-content: flex-end;
   overflow: hidden;
   height: 100vh;
+  @media screen and (max-width: 900px) {
+    height: 50vh;
+  }
 }
 
 .name-background-anim {
@@ -131,6 +134,11 @@ const words = ["20 / 01", "ANNA SHCHAPOVA", "BIRTHDAY", "20 / 01"];
     height: 20vw;
     line-height: 100%;
     font-family: "Anton", serif;
+    @media screen and (max-width: 900px) {
+      font-size: 12vh;
+      line-height: 12vh;
+      height: 12vh;
+    }
   }
 }
 

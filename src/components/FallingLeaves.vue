@@ -10,7 +10,6 @@
 <script setup lang="ts">
 import { ref, onMounted } from "vue";
 import { gsap } from "gsap";
-
 const leavesRef = ref(null);
 const leaves = ref(
   Array.from({ length: 40 }, (_, i) => ({
@@ -53,7 +52,7 @@ onMounted(() => {
 });
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .falling-leaves {
   position: absolute;
   width: 100vw;
@@ -73,5 +72,9 @@ onMounted(() => {
   /* opacity: 0.8; */
   border-radius: 0 120px;
   clip-path: polygon(100% 69%, 63% 66%, 70% 99%, 0 100%, 0 0, 100% 0);
+  @media screen and (max-width: 900px) {
+    width: 70px;
+    height: 70px;
+  }
 }
 </style>
